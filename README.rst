@@ -135,7 +135,7 @@ NB Previously you needed both ckanext-archiver and ckanext-qa to see the broken 
 Migrations post 2.0
 -------------------
 
-Over time it is possible that the database structure will change.  In these cases you can use the migrate command to update the database schema.  
+Over time it is possible that the database structure will change.  In these cases you can use the migrate command to update the database schema.
 
     ::
         paster --plugin=ckanext-archiver archiver migrate -c <path to CKAN ini file>
@@ -295,11 +295,7 @@ However in production you'd run the priority and bulk queues separately, or else
     paster --plugin=ckanext-archiver celeryd2 run priority -c production.ini
     paster --plugin=ckanext-archiver celeryd2 run bulk -c production.ini
 
-For production use, we recommend setting up Celery to run with supervisord.
-For more information see:
-
-* http://docs.ckan.org/en/latest/extensions.html#enabling-an-extension-with-background-tasks
-* http://wiki.ckan.org/Writing_asynchronous_tasks
+For production use, we recommend setting up Celery to run with supervisord. `apt-get install supervisor` and use `bin/celery-supervisor.conf` as a configuration template.
 
 An archival can be triggered by adding a dataset with a resource or updating a resource URL. Alternatively you can run::
 
@@ -334,6 +330,18 @@ To run the tests:
 3. From the CKAN root directory (not the extension root) do::
 
     (pyenv)~/pyenv/src/ckan$ nosetests --ckan ../ckanext-archiver/tests/ --with-pylons=../ckanext-archiver/test-core.ini
+
+
+Translations
+------
+
+To translate plugin to a new language (ie. "pl") run `python setup.py init_catalog -l pl`.
+
+To update template file with new translation added in the code or templates
+run `python setup.py extract_messages` in the root plugin directory. Then run
+`./ckanext/archiver/i18n/unique_pot.sh -v` to strip other plugin's translations.
+
+To update translation files for locale "pl" with new template run `python setup.py update_catalog -l pl`.
 
 
 Building Debian package
