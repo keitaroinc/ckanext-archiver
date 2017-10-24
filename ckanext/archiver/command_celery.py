@@ -121,7 +121,7 @@ class CeleryCmd(CkanCommand):
 
         LIST_PARAMS = 'CELERY_IMPORTS ADMINS ROUTES'.split()
         try:
-            for key, value in config.items('app:celery'):
+            for key, value in config.items('app:celery_archiver'):
                 celery_config[key.upper()] = value.split() \
                     if key in LIST_PARAMS else value
         except ConfigParser.NoSectionError:
