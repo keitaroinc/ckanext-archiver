@@ -125,7 +125,7 @@ class CeleryCmd(CkanCommand):
                 celery_config[key.upper()] = value.split() \
                     if key in LIST_PARAMS else value
         except ConfigParser.NoSectionError:
-            error = 'Could not find celery config in your ckan ini file (a section headed "[app:celery]".'
+            error = 'Could not find celery config in your ckan ini file (a section headed "[app:celery_archiver]".'
             print error
             sys.exit(1)
 
