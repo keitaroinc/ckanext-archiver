@@ -56,7 +56,7 @@ def create_archiver_package_task(package, queue):
     #                  args=[ckan_ini_filepath, package.id, queue],
     #                  task_id=task_id, queue=queue)
     schedule_task(fn=update_package, name='archiver.update_package',
-                  args=[ckan_ini_filepath, resource.id, queue],
+                  args=[ckan_ini_filepath, package.id, queue],
                   task_id=task_id, queue=queue)
     log.debug('Archival of package put into celery queue %s: %s',
               queue, package.name)
