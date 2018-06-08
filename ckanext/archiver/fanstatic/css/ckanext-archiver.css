@@ -1,0 +1,12 @@
+.archiver-wrap{
+  padding-top: 0;
+}
+
+.panel-body :last-child,
+.list-group-item :last-child{
+  margin-bottom: 0;
+}
+
+.archiver .reason{
+  margin-top: 3px;
+}
