@@ -33,38 +33,52 @@ and all the Archival.as_dict() info from the package_show's resource['archiver']
 
 #}
 <div class="archiver {% if is_broken %}link-broken{% elif is_broken == None %}link-not-sure{% else %}link-not-broken{% endif %}">
-  {%- if is_broken == True -%}
-    <span class="icon icon-exclamation-sign text-error"></span>
-    {% trans %}Link is broken{% endtrans %}<br>
-    {% if reason %}
-      - {{ reason }}<br>
-    {% endif %}
-    {% if failure_count == 1 %}
-      <span>{% trans %}This is a one-off failure{% endtrans %}</span><br>
-    {% else %}
-      <span>{% trans first_failure=h.render_datetime(first_failure) %}This resource has failed {{ failure_count }} times in a row since it first failed: {{ first_failure }}{% endtrans %}</span><br>
-    {% endif %}
-    {% if last_success %}
-      <span>{% trans last_success=h.render_datetime(last_success) %}This resource was last ok: {{ last_success }}{% endtrans %}</span><br>
-    {% else %}
-      <span>{% trans created=h.render_datetime(created) %}We do not have a past record of it working since the first check: {{ created }}{% endtrans %}</span><br>
-    {% endif %}
-  {%- elif is_broken == None -%}
-    {% trans %}Link check is not conclusive{% endtrans %}<br>
-    {% if reason %}
-      - {{ reason }}<br>
-    {% endif %}
-  {%- else-%}
-    {% trans %}Link is ok{% endtrans %}<br>
-    {% if reason %}
-      - {{ reason }}<br>
-    {% endif %}
-  {%- endif -%}
- {# doesn't work
-  {% if resource_timestamp != resource['revision_timestamp'] %}
-      This was tested with an older version of this resource. An update should occur soon.<!-- resource_timestamp {{resource_timestamp}} revision_timestamp {{resource['revision_timestamp']}}--> <br>
-  {% endif %}
- #}
-  <span>{% trans updated=h.render_datetime(updated) %}Link checked: {{ updated }}{% endtrans %}</span><br>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title"><span class="fa fa-check-square-o"></span> {{ _('Validation') }}</h3>
+    </div>
+        <ul class="list-group">
+          <li class="list-group-item">
+        {%- if is_broken == True -%}
+          <dl>
+            <dt class="text-danger"><span class="fa fa-times"></span> {% trans %}Link is broken{% endtrans %}</dt>
+            {% if reason %}
+            <dd class="reason">{{ reason }}</dd>
+            {% endif %}
+            {% if failure_count == 1 %}
+            <dd>{% trans %}This is a one-off failure{% endtrans %}</dd>
+            {% else %}
+            <dd>{% trans first_failure=h.render_datetime(first_failure) %}This resource has failed {{ failure_count }} times in a row since it first failed: {{ first_failure }}{% endtrans %}</dd>
+            {% endif %}
+            {% if last_success %}
+            <dd>{% trans last_success=h.render_datetime(last_success) %}This resource was last ok: {{ last_success }}{% endtrans %}</dd>
+            {% else %}
+            <dd>{% trans created=h.render_datetime(created) %}We do not have a past record of it working since the first check: {{ created }}{% endtrans %}</dd>
+            {% endif %}
+          </dl>
+          {%- elif is_broken == None -%}
+          <dl>
+            <dt class="text-warning">{% trans %}Link check is not conclusive{% endtrans %}.</dt>
+            {% if reason %}
+            <dd class="reason"><span class="fa fa-exclamation-triangle"></span> {{ reason }}</dd>
+            {% endif %}
+          </dl>
+          {%- else-%}
+          <dl>
+            <dt class="text-success">{% trans %}Link is ok{% endtrans %}.</dt>
+          </dl>
+          {% if reason %}
+          <dd class="reason"><span class="fa fa-check-circle"></span> {{ reason }}</dd>
+          {% endif %}
+        </li>
+        {%- endif -%}
+      {# doesn't work
+        {% if resource_timestamp != resource['revision_timestamp'] %}
+            This was tested with an older version of this resource. An update should occur soon.<!-- resource_timestamp {{resource_timestamp}} revision_timestamp {{resource['revision_timestamp']}}--> <br>
+        {% endif %}
+      #}
+      <li class="list-group-item">{% trans updated=h.render_datetime(updated) %}Link checked: {{ updated }}{% endtrans %}</li>
+      </ul>
+  </div>
 </div>
 
