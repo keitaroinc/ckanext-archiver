@@ -33,19 +33,31 @@ and all the Archival.as_dict() info from the package_show's resource['archiver']
 
 #}
 <div class="archiver {% if cache_url %}link-cached{% else %}link-not-cached{% endif %}">
-  {%- if cache_url -%}
-    <a href="{{ cache_url }}">
-      <span class="icon icon-download-alt"></span>
-      {% trans %}Download cached copy{% endtrans %}
-    </a><br>
-    {% trans %}Size{% endtrans %}: {{ size|filesizeformat }} <br>
-    {% trans %}Cached on{% endtrans %}: {{ h.render_datetime(last_success) }}
-    {% if is_broken %}
-      ({% trans %}before it was broken{% endtrans %})
-    {% endif %}<br>
-  {% else %}
-    {% trans %}No cached copy available{% endtrans %}<br>
-  {% endif %}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title"><span class="fa fa-file-archive-o"></span> {{ _('Archive') }}</h3>
+    </div>
+    {%- if cache_url -%}
+    <div class="panel-body">
+      <a class="btn btn-default" href="{{ cache_url }}">
+        <span class="fa fa-download"></span>
+        {% trans %}Download cached copy{% endtrans %}
+      </a>
+      </div>
+        <ul class="list-group">
+          <li class="list-group-item">{% trans %}Size{% endtrans %}: {{ size|filesizeformat }}</li>
+          <li class="list-group-item">{% trans %}Cached on{% endtrans %}: {{ h.render_datetime(last_success) }}
+            {% if is_broken %}
+            ({% trans %}before it was broken{% endtrans %})
+            {% endif %}
+          </li>
+        </ul>
+    {% else %}
+    <ul class="list-group">
+      <li class="list-group-item text-muted">{% trans %}No cached copy available{% endtrans %}</span>
+    </ul>
+    {% endif %}
+  </div>
 </div>
 
 
