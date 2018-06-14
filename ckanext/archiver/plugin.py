@@ -9,11 +9,12 @@ from ckanext.archiver.logic import action, auth
 from ckanext.archiver import helpers
 from ckanext.archiver import lib
 from ckanext.archiver.model import Archival, aggregate_archivals_for_a_dataset
+from ckan.lib.plugins import DefaultTranslation
 
 log = logging.getLogger(__name__)
 
 
-class ArchiverPlugin(p.SingletonPlugin, p.toolkit.DefaultDatasetForm):
+class ArchiverPlugin(p.SingletonPlugin, p.toolkit.DefaultDatasetForm, DefaultTranslation):
     """
     Registers to be notified whenever CKAN resources are created or their URLs
     change, and will create a new ckanext.archiver celery task to archive the
@@ -26,6 +27,8 @@ class ArchiverPlugin(p.SingletonPlugin, p.toolkit.DefaultDatasetForm):
     p.implements(p.IAuthFunctions)
     p.implements(p.ITemplateHelpers)
     p.implements(p.IPackageController, inherit=True)
+    p.implements(p.ITranslation)
+
 
     # IDomainObjectModification
 
@@ -200,11 +203,12 @@ class ArchiverPlugin(p.SingletonPlugin, p.toolkit.DefaultDatasetForm):
                 res['archiver'] = archival_dict
 
 
-class TestIPipePlugin(p.SingletonPlugin):
+class TestIPipePlugin(p.SingletonPlugin, DefaultTranslation):
     """
     """
     p.implements(IPipe, inherit=True)
-
+    p.implements(p.ITranslation)
+    
     def __init__(self, *args, **kwargs):
         self.calls = []
 
