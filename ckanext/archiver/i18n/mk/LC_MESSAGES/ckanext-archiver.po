@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-archiver 2.0.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-03-20 17:18+0100\n"
+"POT-Creation-Date: 2018-06-16 23:54+0200\n"
 "PO-Revision-Date: 2018-06-14 14:22+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: mk\n"
@@ -28,155 +28,163 @@ msgstr "Нефункционални линкови"
 
 #: ckanext/archiver/reports.py:240
 msgid "Dataset resource URLs that are found to result in errors when resolved."
-msgstr "Линковите на ресурсот на податочниот сет кои се пронајдени, појавуваат грешки при обидот за нивно разрешување."
+msgstr ""
+"Линковите на ресурсот на податочниот сет кои се пронајдени, појавуваат "
+"грешки при обидот за нивно разрешување."
 
-#: ckanext/archiver/tasks.py:409 ckanext/archiver/tasks.py:430
-#: ckanext/archiver/tasks.py:626
+#: ckanext/archiver/tasks.py:486 ckanext/archiver/tasks.py:507
+#: ckanext/archiver/tasks.py:717
 #, python-format
 msgid "Content-length %s exceeds maximum allowed value %s"
 msgstr "Должината на содржината %s ја надминува максималната дозволена вредност %s"
 
-#: ckanext/archiver/tasks.py:424
+#: ckanext/archiver/tasks.py:501
 #, python-format
 msgid "Server content contained an API error message: %s"
 msgstr "Содржината на серверот содржи API порака за грешка: %s"
 
-#: ckanext/archiver/tasks.py:446
+#: ckanext/archiver/tasks.py:523
 #, python-format
 msgid "Content-length after streaming was %i"
 msgstr "Должината на содржината по испраќањето беше %i"
 
-#: ckanext/archiver/tasks.py:502
+#: ckanext/archiver/tasks.py:593
 msgid "No value for ckanext-archiver.cache_url_root in config"
 msgstr "Не постои вредност за ckanext-archiver.cache_url_root во конфигурација"
 
-#: ckanext/archiver/tasks.py:590
+#: ckanext/archiver/tasks.py:681
 #, python-format
 msgid "URL parsing failure: %s"
 msgstr "Грешка при разложување на URL: %s"
 
-#: ckanext/archiver/tasks.py:595
+#: ckanext/archiver/tasks.py:686
 #, python-format
 msgid "Invalid url scheme. Please use one of: %s"
 msgstr "Погрешна шема на URL. Ве молиме изберете една од: %s"
 
-#: ckanext/archiver/tasks.py:599
+#: ckanext/archiver/tasks.py:690
 msgid "URL parsing failure - did not find a host name"
 msgstr "Грешка при разложување на URL - не е пронајдено име на сервер"
 
-#: ckanext/archiver/tasks.py:722 ckanext/archiver/tasks.py:872
+#: ckanext/archiver/tasks.py:813 ckanext/archiver/tasks.py:960
 #, python-format
 msgid "Connection error: %s"
 msgstr "Проблем со врската: %s"
 
-#: ckanext/archiver/tasks.py:724 ckanext/archiver/tasks.py:874
+#: ckanext/archiver/tasks.py:815 ckanext/archiver/tasks.py:962
 #, python-format
 msgid "Invalid HTTP response: %s"
 msgstr "Погрешен HTTP одговор: %s"
 
-#: ckanext/archiver/tasks.py:726 ckanext/archiver/tasks.py:876
+#: ckanext/archiver/tasks.py:817 ckanext/archiver/tasks.py:964
 #, python-format
 msgid "Connection timed out after %ss"
 msgstr "Врската истече после %ss"
 
-#: ckanext/archiver/tasks.py:728 ckanext/archiver/tasks.py:878
+#: ckanext/archiver/tasks.py:819 ckanext/archiver/tasks.py:966
 msgid "Too many redirects"
 msgstr "Премногу пренасочувања"
 
-#: ckanext/archiver/tasks.py:730
+#: ckanext/archiver/tasks.py:821
 #, python-format
 msgid "Error downloading: %s"
 msgstr "Грешка при преземање: %s"
 
-#: ckanext/archiver/tasks.py:734
+#: ckanext/archiver/tasks.py:825
 #, python-format
 msgid "Error with the download: %s"
 msgstr "Грешка со преземеното: %s"
 
-#: ckanext/archiver/tasks.py:867
+#: ckanext/archiver/tasks.py:955
 msgid "Invalid URL or Redirect Link"
 msgstr "Погрешен URL или линк за пренасочување"
 
-#: ckanext/archiver/tasks.py:870
+#: ckanext/archiver/tasks.py:958
 msgid "Could not make HEAD request"
 msgstr "Неуспешно креирање на HEAD барање"
 
-#: ckanext/archiver/tasks.py:880
+#: ckanext/archiver/tasks.py:968
 #, python-format
 msgid "Error during request: %s"
 msgstr "Грешка при барање: %s"
 
-#: ckanext/archiver/tasks.py:882
+#: ckanext/archiver/tasks.py:970
 #, python-format
 msgid "Error with the request: %s"
 msgstr "Грешка со барањето: %s"
 
-#: ckanext/archiver/tasks.py:889
+#: ckanext/archiver/tasks.py:977
 #, python-format
 msgid "Server returned HTTP error status: %s %s"
 msgstr "Серверот врати HTTP грешка со статус: %s %s"
 
 #: ckanext/archiver/templates/archiver/is_resource_broken.html:38
+msgid "Validation"
+msgstr "Валидација"
+
+#: ckanext/archiver/templates/archiver/is_resource_broken.html:44
 msgid "Link is broken"
 msgstr "Линкот е нефункционален"
 
-#: ckanext/archiver/templates/archiver/is_resource_broken.html:43
+#: ckanext/archiver/templates/archiver/is_resource_broken.html:49
 msgid "This is a one-off failure"
 msgstr "Ова е еднократна грешка"
 
-#: ckanext/archiver/templates/archiver/is_resource_broken.html:45
+#: ckanext/archiver/templates/archiver/is_resource_broken.html:51
 #, python-format
 msgid ""
 "This resource has failed %(failure_count)s times in a row since it first "
 "failed: %(first_failure)s"
 msgstr ""
-"Овој ресурс беше неуспешен %(failure_count) пати по ред од првиот "
-"обид: %(first_failure)"
+"Овој ресурс беше неуспешен %(failure_count)s пати по ред од првиот обид: "
+"%(first_failure)s"
 
-#: ckanext/archiver/templates/archiver/is_resource_broken.html:48
+#: ckanext/archiver/templates/archiver/is_resource_broken.html:54
 #, python-format
 msgid "This resource was last ok: %(last_success)s"
-msgstr "Овој ресурс последниот пат беше во ред: %(last_success)"
+msgstr "Овој ресурс последниот пат беше во ред: %(last_success)s"
 
-#: ckanext/archiver/templates/archiver/is_resource_broken.html:50
+#: ckanext/archiver/templates/archiver/is_resource_broken.html:56
 #, python-format
 msgid ""
 "We do not have a past record of it working since the first check: "
 "%(created)s"
-msgstr ""
-"Немаме постоечки запис за функционалноста, од првата проверка: "
-"%(created)"
+msgstr "Немаме постоечки запис за функционалноста, од првата проверка: %(created)s"
 
-#: ckanext/archiver/templates/archiver/is_resource_broken.html:53
+#: ckanext/archiver/templates/archiver/is_resource_broken.html:61
 msgid "Link check is not conclusive"
 msgstr "Преверката на линкот не е конечен"
 
-#: ckanext/archiver/templates/archiver/is_resource_broken.html:58
+#: ckanext/archiver/templates/archiver/is_resource_broken.html:68
 msgid "Link is ok"
 msgstr "Линкот е во ред"
 
-#: ckanext/archiver/templates/archiver/is_resource_broken.html:68
+#: ckanext/archiver/templates/archiver/is_resource_broken.html:80
 #, python-format
 msgid "Link checked: %(updated)s"
-msgstr "Линкот е проверен: %(updated)"
+msgstr "Линкот е проверен: %(updated)s"
 
-#: ckanext/archiver/templates/archiver/is_resource_cached.html:39
+#: ckanext/archiver/templates/archiver/is_resource_cached.html:38
+msgid "Archive"
+msgstr "Архива"
+
+#: ckanext/archiver/templates/archiver/is_resource_cached.html:44
 msgid "Download cached copy"
 msgstr "Преземи кеширана копија"
 
-#: ckanext/archiver/templates/archiver/is_resource_cached.html:41
+#: ckanext/archiver/templates/archiver/is_resource_cached.html:48
 msgid "Size"
 msgstr "Големина"
 
-#: ckanext/archiver/templates/archiver/is_resource_cached.html:42
+#: ckanext/archiver/templates/archiver/is_resource_cached.html:49
 msgid "Cached on"
 msgstr "Кеширано на"
 
-#: ckanext/archiver/templates/archiver/is_resource_cached.html:44
+#: ckanext/archiver/templates/archiver/is_resource_cached.html:51
 msgid "before it was broken"
 msgstr "пред да биде нефункционално"
 
-#: ckanext/archiver/templates/archiver/is_resource_cached.html:47
+#: ckanext/archiver/templates/archiver/is_resource_cached.html:57
 msgid "No cached copy available"
 msgstr "Не е достапна кеширана копија"
 
@@ -186,9 +194,22 @@ msgstr "Не е достапна кеширана копија"
 msgid "Broken datasets"
 msgstr "Нефункционален податочен сет"
 
+#: ckanext/archiver/templates/report/broken_links.html:13
+#: ckanext/archiver/templates/report/broken_links.html:43
+msgid "Organization"
+msgstr "Институција"
+
 #: ckanext/archiver/templates/report/broken_links.html:16
 msgid "% Broken links"
 msgstr "% Нефункционални линкови"
+
+#: ckanext/archiver/templates/report/broken_links.html:40
+msgid "Dataset"
+msgstr "Податочен сет"
+
+#: ckanext/archiver/templates/report/broken_links.html:41
+msgid "Notes"
+msgstr "Белешки"
 
 #: ckanext/archiver/templates/report/broken_links.html:45
 msgid "Index/position of the resource in the dataset"
@@ -197,6 +218,14 @@ msgstr "Индексот/позицијата на ресурсот во под�
 #: ckanext/archiver/templates/report/broken_links.html:45
 msgid "Res"
 msgstr "Рес"
+
+#: ckanext/archiver/templates/report/broken_links.html:46
+msgid "URL"
+msgstr "URL"
+
+#: ckanext/archiver/templates/report/broken_links.html:47
+msgid "Status"
+msgstr "Статус"
 
 #: ckanext/archiver/templates/report/broken_links.html:48
 msgid "Reason"
