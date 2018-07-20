@@ -1,0 +1,266 @@
+# Albanian translations for ckanext-archiver.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the ckanext-archiver
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ckanext-archiver 2.0.0\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-06-16 23:54+0200\n"
+"PO-Revision-Date: 2018-07-20 16:29+0200\n"
+"Language: sq\n"
+"Language-Team: sq <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 2.0.4\n"
+
+#: ckanext/archiver/reports.py:239
+#: ckanext/archiver/templates/report/broken_links.html:4
+#: ckanext/archiver/templates/report/broken_links.html:15
+#: ckanext/archiver/templates/report/broken_links.html:35
+msgid "Broken links"
+msgstr "Lidhje të thyera"
+
+#: ckanext/archiver/reports.py:240
+msgid "Dataset resource URLs that are found to result in errors when resolved."
+msgstr ""
+"URL-të e burimeve të të dhënave që gjenden të rezultojnë me gabime kur "
+"zgjidhen."
+
+#: ckanext/archiver/tasks.py:486 ckanext/archiver/tasks.py:507
+#: ckanext/archiver/tasks.py:717
+#, python-format
+msgid "Content-length %s exceeds maximum allowed value %s"
+msgstr "Content-length %s kalon vlerën maksimale të lejuar %s"
+
+#: ckanext/archiver/tasks.py:501
+#, python-format
+msgid "Server content contained an API error message: %s"
+msgstr "Përmbajtja e serverit përmbante një mesazh gabimi API: %s"
+
+#: ckanext/archiver/tasks.py:523
+#, python-format
+msgid "Content-length after streaming was %i"
+msgstr "Content-length pas rrjedhjes ishte %i"
+
+#: ckanext/archiver/tasks.py:593
+msgid "No value for ckanext-archiver.cache_url_root in config"
+msgstr "Nuk ka vlerë për ckanext-archiver.cache_url_root në konfigurim"
+
+#: ckanext/archiver/tasks.py:681
+#, python-format
+msgid "URL parsing failure: %s"
+msgstr "Dështimi i analizës URL: %s"
+
+#: ckanext/archiver/tasks.py:686
+#, python-format
+msgid "Invalid url scheme. Please use one of: %s"
+msgstr "Skemë url e pavlefshme. Ju lutemi përdorni një nga: %s"
+
+#: ckanext/archiver/tasks.py:690
+msgid "URL parsing failure - did not find a host name"
+msgstr "Dështimi i analizës së URL-së - nuk gjeti një emër host"
+
+#: ckanext/archiver/tasks.py:813 ckanext/archiver/tasks.py:960
+#, python-format
+msgid "Connection error: %s"
+msgstr "Gabim i lidhjes: %s"
+
+#: ckanext/archiver/tasks.py:815 ckanext/archiver/tasks.py:962
+#, python-format
+msgid "Invalid HTTP response: %s"
+msgstr "Përgjigje HTTP e pavlefshme: %s"
+
+#: ckanext/archiver/tasks.py:817 ckanext/archiver/tasks.py:964
+#, python-format
+msgid "Connection timed out after %ss"
+msgstr "Lidhja përfundoi pas %ss"
+
+#: ckanext/archiver/tasks.py:819 ckanext/archiver/tasks.py:966
+msgid "Too many redirects"
+msgstr "Shumë përcjellime"
+
+#: ckanext/archiver/tasks.py:821
+#, python-format
+msgid "Error downloading: %s"
+msgstr "Gabim gjatë shkarkimit: %s"
+
+#: ckanext/archiver/tasks.py:825
+#, python-format
+msgid "Error with the download: %s"
+msgstr "Gabim me shkarkimin: %s"
+
+#: ckanext/archiver/tasks.py:955
+msgid "Invalid URL or Redirect Link"
+msgstr "URL e pavlefshme ose lidhje përcjellëse"
+
+#: ckanext/archiver/tasks.py:958
+msgid "Could not make HEAD request"
+msgstr "Nuk mund të kërkonte HEAD"
+
+#: ckanext/archiver/tasks.py:968
+#, python-format
+msgid "Error during request: %s"
+msgstr "Gabim gjatë kërkesës: %s"
+
+#: ckanext/archiver/tasks.py:970
+#, python-format
+msgid "Error with the request: %s"
+msgstr "Gabim me kërkesën: %s"
+
+#: ckanext/archiver/tasks.py:977
+#, python-format
+msgid "Server returned HTTP error status: %s %s"
+msgstr "Serveri u kthye statusin e gabimit HTTP: %s %s"
+
+#: ckanext/archiver/templates/archiver/is_resource_broken.html:38
+msgid "Validation"
+msgstr "Validimi"
+
+#: ckanext/archiver/templates/archiver/is_resource_broken.html:44
+msgid "Link is broken"
+msgstr "Lidhja është e prishur"
+
+#: ckanext/archiver/templates/archiver/is_resource_broken.html:49
+msgid "This is a one-off failure"
+msgstr "Ky është një dështim i njëhershëm"
+
+#: ckanext/archiver/templates/archiver/is_resource_broken.html:51
+#, python-format
+msgid ""
+"This resource has failed %(failure_count)s times in a row since it first "
+"failed: %(first_failure)s"
+msgstr ""
+"Ky burim ka dështuar %(failure_count)s herë me radhë që nga dështimi i parë: "
+"%(first_failure)s"
+
+#: ckanext/archiver/templates/archiver/is_resource_broken.html:54
+#, python-format
+msgid "This resource was last ok: %(last_success)s"
+msgstr "Ky burim ishte i fundit në rregull: %(last_success)s"
+
+#: ckanext/archiver/templates/archiver/is_resource_broken.html:56
+#, python-format
+msgid ""
+"We do not have a past record of it working since the first check: %(created)s"
+msgstr ""
+"Ne nuk kemi një rekord të mëparshëm të punës që nga kontrolli i parë: "
+"%(created)s"
+
+#: ckanext/archiver/templates/archiver/is_resource_broken.html:61
+msgid "Link check is not conclusive"
+msgstr "Kontrolli i lidhjes nuk është përfundimtar"
+
+#: ckanext/archiver/templates/archiver/is_resource_broken.html:68
+msgid "Link is ok"
+msgstr "Lidhja është në rregull"
+
+#: ckanext/archiver/templates/archiver/is_resource_broken.html:80
+#, python-format
+msgid "Link checked: %(updated)s"
+msgstr "Lidhja është e kontrolluar: %(updated)s"
+
+#: ckanext/archiver/templates/archiver/is_resource_cached.html:38
+msgid "Archive"
+msgstr "Arkivi"
+
+#: ckanext/archiver/templates/archiver/is_resource_cached.html:44
+msgid "Download cached copy"
+msgstr "Shkarko kopjen e kopjuar"
+
+#: ckanext/archiver/templates/archiver/is_resource_cached.html:48
+msgid "Size"
+msgstr "Madhësi"
+
+#: ckanext/archiver/templates/archiver/is_resource_cached.html:49
+msgid "Cached on"
+msgstr "Të ruajtur në kujtesë"
+
+#: ckanext/archiver/templates/archiver/is_resource_cached.html:51
+msgid "before it was broken"
+msgstr "para se të ishte thyer"
+
+#: ckanext/archiver/templates/archiver/is_resource_cached.html:57
+msgid "No cached copy available"
+msgstr "Asnjë kopje e ruajtur në ruajtje"
+
+#: ckanext/archiver/templates/report/broken_links.html:3
+#: ckanext/archiver/templates/report/broken_links.html:14
+#: ckanext/archiver/templates/report/broken_links.html:34
+msgid "Broken datasets"
+msgstr "Grupe të thyer të të dhënave"
+
+#: ckanext/archiver/templates/report/broken_links.html:13
+#: ckanext/archiver/templates/report/broken_links.html:43
+msgid "Organization"
+msgstr "Organizatë"
+
+#: ckanext/archiver/templates/report/broken_links.html:16
+msgid "% Broken links"
+msgstr "% Lidhje të thyera"
+
+#: ckanext/archiver/templates/report/broken_links.html:40
+msgid "Dataset"
+msgstr "Seti i të dhënave"
+
+#: ckanext/archiver/templates/report/broken_links.html:41
+msgid "Notes"
+msgstr "Shënime"
+
+#: ckanext/archiver/templates/report/broken_links.html:45
+msgid "Index/position of the resource in the dataset"
+msgstr "Indeksi / pozicioni i burimit në setin e të dhënave"
+
+#: ckanext/archiver/templates/report/broken_links.html:45
+msgid "Res"
+msgstr "Res"
+
+#: ckanext/archiver/templates/report/broken_links.html:46
+msgid "URL"
+msgstr "URL"
+
+#: ckanext/archiver/templates/report/broken_links.html:47
+msgid "Status"
+msgstr "Status"
+
+#: ckanext/archiver/templates/report/broken_links.html:48
+msgid "Reason"
+msgstr "Arsye"
+
+#: ckanext/archiver/templates/report/broken_links.html:49
+msgid "Failed download attempts"
+msgstr "Përpjekjet e shkarkimit të dështuara"
+
+#: ckanext/archiver/templates/report/broken_links.html:49
+msgid "No. of fails"
+msgstr "Numri i dështon"
+
+#: ckanext/archiver/templates/report/broken_links.html:50
+msgid "First failed attempt"
+msgstr "Dështimi i parë"
+
+#: ckanext/archiver/templates/report/broken_links.html:50
+msgid "First fail"
+msgstr "Së pari dështojnë"
+
+#: ckanext/archiver/templates/report/broken_links.html:51
+msgid "Most recent failed attempt"
+msgstr "Përpjekja më e fundit e dështuar"
+
+#: ckanext/archiver/templates/report/broken_links.html:51
+msgid "Latest fail"
+msgstr "Fundit dështojnë"
+
+#: ckanext/archiver/templates/report/broken_links.html:52
+msgid "The last time it was successfully obtained"
+msgstr "Herën e fundit u arrit me sukses"
+
+#: ckanext/archiver/templates/report/broken_links.html:52
+msgid "Last success"
+msgstr "Suksesi i fundit"
