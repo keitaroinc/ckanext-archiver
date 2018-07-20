@@ -197,7 +197,7 @@ msgstr "Нефункционален податочен сет"
 #: ckanext/archiver/templates/report/broken_links.html:13
 #: ckanext/archiver/templates/report/broken_links.html:43
 msgid "Organization"
-msgstr "Институција"
+msgstr "Организација"
 
 #: ckanext/archiver/templates/report/broken_links.html:16
 msgid "% Broken links"
