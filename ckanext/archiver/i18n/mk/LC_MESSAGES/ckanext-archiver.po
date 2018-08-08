@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-archiver 2.0.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-16 23:54+0200\n"
+"POT-Creation-Date: 2018-08-08 12:02+0200\n"
 "PO-Revision-Date: 2018-06-14 14:22+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: mk\n"
@@ -19,14 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
 
-#: ckanext/archiver/reports.py:239
-#: ckanext/archiver/templates/report/broken_links.html:4
-#: ckanext/archiver/templates/report/broken_links.html:15
-#: ckanext/archiver/templates/report/broken_links.html:35
-msgid "Broken links"
-msgstr "Нефункционални линкови"
-
-#: ckanext/archiver/reports.py:240
+#: ckanext/archiver/plugin.py:146
 msgid "Dataset resource URLs that are found to result in errors when resolved."
 msgstr ""
 "Линковите на ресурсот на податочниот сет кои се пронајдени, појавуваат "
@@ -193,6 +186,12 @@ msgstr "Не е достапна кеширана копија"
 #: ckanext/archiver/templates/report/broken_links.html:34
 msgid "Broken datasets"
 msgstr "Нефункционален податочен сет"
+
+#: ckanext/archiver/templates/report/broken_links.html:4
+#: ckanext/archiver/templates/report/broken_links.html:15
+#: ckanext/archiver/templates/report/broken_links.html:35
+msgid "Broken links"
+msgstr "Нефункционални линкови"
 
 #: ckanext/archiver/templates/report/broken_links.html:13
 #: ckanext/archiver/templates/report/broken_links.html:43

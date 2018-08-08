@@ -10,6 +10,7 @@ from ckanext.archiver import helpers
 from ckanext.archiver import lib
 from ckanext.archiver.model import Archival, aggregate_archivals_for_a_dataset
 from ckan.lib.plugins import DefaultTranslation
+from ckan.plugins import toolkit
 
 log = logging.getLogger(__name__)
 
@@ -142,6 +143,7 @@ class ArchiverPlugin(p.SingletonPlugin, p.toolkit.DefaultDatasetForm, DefaultTra
     # IReport
 
     def register_reports(self):
+        toolkit._('Dataset resource URLs that are found to result in errors when resolved.')
         """Register details of an extension's reports"""
         from ckanext.archiver import reports
         return [reports.broken_links_report_info,
